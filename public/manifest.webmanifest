@@ -2,20 +2,20 @@
   "name": "SofraAI — Türk Mutfağı Kalori & Makro Koçu",
   "short_name": "SofraAI",
   "description": "Türk ev yemekleri ve lokanta öğünlerine kalibre edilmiş 2 dokunuşlu kalori, protein, karbonhidrat ve yağ takip koçu.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#F7F5F0",
   "theme_color": "#C84B31",
   "lang": "tr",
   "icons": [
     {
-      "src": "/store-assets/sofraai_icon.png",
+      "src": "store-assets/sofraai_icon.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/favicon.svg",
+      "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
