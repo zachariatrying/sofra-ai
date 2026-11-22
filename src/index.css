@@ -1,0 +1,37 @@
+/* SofraAI — Design System Tokens
+ * Mode: Operate | Palette: 60-30-10 Stoneware Kitchen (#F7F5F0 / #1C231F / #C84B31)
+ */
+@import "tailwindcss";
+
+:root {
+  --bg-stone: #f7f5f0;
+  --bg-card: #ffffff;
+  --border-clay: #e6e2d9;
+  --ink-olive: #1c231f;
+  --ink-muted: #5d6660;
+  --accent-pomegranate: #c84b31;
+  --macro-protein: #2563eb;
+  --macro-carb: #d97706;
+  --macro-fat: #7c3aed;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-stone);
+  color: var(--ink-olive);
+}
+
+.font-display-sofra {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--accent-pomegranate);
+  outline-offset: 2px;
+}
