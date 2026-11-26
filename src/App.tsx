@@ -452,6 +452,15 @@ export default function App() {
               <p className="text-[11px] text-[#5D6660] mt-1">
                 Anahtar sadece bu tarayıcının yerel deposunda saklanır.
               </p>
+              {state.geminiApiKey.trim().length > 0 && (
+                <p className="mt-2 rounded-lg border border-[#F59E0B]/40 bg-[#FFFBEB] px-2.5 py-2 text-[11px] text-[#78350F]">
+                  <strong>Harici Yapay Zeka Bildirimi:</strong> Fotoğraf analizi özelliğini kullandığınızda yüklediğiniz
+                  yemek görseli analiz için doğrudan <strong>Google LLC (Google Gemini API)</strong> sunucularına iletilir.{' '}
+                  <a href="./privacy.html" className="underline font-bold">
+                    Gizlilik Politikası
+                  </a>
+                </p>
+              )}
             </div>
 
             <button
