@@ -297,9 +297,9 @@ export default function App() {
                               <span>·</span>
                               <span className="uppercase">{meal.portionScale}</span>
                             </div>
-                            <div className="flex items-baseline gap-2 mt-1.5">
-                              <h3 className="font-display-sofra text-sm font-bold text-[#231F1D] shrink-0">{meal.title}</h3>
-                              <span className="flex-1 border-b border-dotted border-[#231F1D]/25" />
+                            <div className="flex items-baseline gap-2 mt-1.5 min-w-0">
+                              <h3 className="font-display-sofra text-sm font-bold text-[#231F1D] truncate">{meal.title}</h3>
+                              <span className="flex-1 min-w-[12px] border-b border-dotted border-[#231F1D]/25" />
                               <span className="text-sm font-extrabold tabular-nums text-[#B83B24] shrink-0">
                                 {totals.kcal} kcal
                               </span>
