@@ -182,15 +182,21 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-30 border-b border-[#E6E2D9] bg-[#F7F5F0]/95 backdrop-blur-md">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
-            <img src="/favicon.svg" alt="" className="w-8 h-8" />
+    <div className="min-h-screen flex flex-col bg-[#FBF7F0] text-[#231F1D]">
+      <header className="mx-auto max-w-6xl w-full px-4 sm:px-6 pt-5 pb-4 border-b-2 border-[#231F1D]/15">
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <img
+              src={`${import.meta.env.BASE_URL}store-assets/sofraai_icon.png`}
+              alt="SofraAI"
+              className="w-10 h-10 rounded-full border border-[#E4DDD0] object-cover"
+            />
             <div>
-              <h1 className="font-display-sofra text-xl font-bold text-[#1C231F]">SofraAI</h1>
-              <p className="hidden sm:block text-[11px] text-[#5D6660]">
-                Türk mutfağı ve ev yemeklerine kalibre edilmiş kalori & makro koçun
+              <h1 className="font-display-sofra text-2xl sm:text-3xl font-bold text-[#231F1D] leading-none">
+                SofraAI
+              </h1>
+              <p className="hidden sm:block text-xs text-[#5D5752] mt-1">
+                Türk mutfağı ve ev yemekleri için günlük mutfak defteri
               </p>
             </div>
           </div>
@@ -199,19 +205,19 @@ export default function App() {
             <button
               type="button"
               onClick={() => downloadSofraCardPng(consumed, state.targets, waterCount, todaysMeals.length)}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#E6E2D9] bg-white px-3 py-2 text-xs font-semibold text-[#1C231F] hover:border-[#C84B31] cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#231F1D]/20 bg-[#FFFDF8] px-3.5 py-2 text-xs font-semibold text-[#231F1D] hover:border-[#B83B24] cursor-pointer"
             >
-              <ImageDown className="w-4 h-4 text-[#C84B31]" />
-              <span className="hidden sm:inline">Günün Kartı PNG</span>
+              <ImageDown className="w-4 h-4 text-[#B83B24]" />
+              <span className="hidden sm:inline">Günün Kartı</span>
             </button>
 
             <button
               type="button"
               onClick={() => setSettingsOpen(true)}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#E6E2D9] bg-white px-3.5 py-2 text-xs font-semibold text-[#1C231F] hover:bg-[#EFECE5] cursor-pointer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#B83B24] px-4 py-2 text-xs font-semibold text-white hover:bg-[#9B2F1B] cursor-pointer"
             >
-              <Settings className="w-4 h-4 text-[#5D6660]" />
-              Hedef & KVKK
+              <Settings className="w-4 h-4" />
+              Hedef &amp; KVKK
             </button>
           </div>
         </div>
@@ -281,24 +287,24 @@ export default function App() {
                         key={meal.id}
                         className="rounded-2xl border border-[#ECE8DF] bg-[#FAF8F4] p-3.5"
                       >
-                        <div className="flex items-start justify-between gap-2">
-                          <div className="min-w-0">
-                            <div className="flex items-center gap-2 text-[11px] font-semibold text-[#5D6660]">
-                              <span className="rounded-full bg-white border border-[#E6E2D9] px-2 py-0.5 text-[#1C231F]">
+                        <div className="flex items-baseline justify-between gap-2">
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-2 text-[11px] font-semibold text-[#5D5752]">
+                              <span className="rounded-full bg-white border border-[#E4DDD0] px-2 py-0.5 text-[#231F1D]">
                                 {meal.slot}
                               </span>
                               <span className="tabular-nums">{meal.timeLabel}</span>
                               <span>·</span>
                               <span className="uppercase">{meal.portionScale}</span>
                             </div>
-                            <h3 className="text-sm font-bold text-[#1C231F] mt-1">{meal.title}</h3>
-                          </div>
-
-                          <div className="text-right shrink-0">
-                            <div className="text-sm font-extrabold tabular-nums text-[#1C231F]">
-                              {totals.kcal} kcal
+                            <div className="flex items-baseline gap-2 mt-1.5">
+                              <h3 className="font-display-sofra text-sm font-bold text-[#231F1D] shrink-0">{meal.title}</h3>
+                              <span className="flex-1 border-b border-dotted border-[#231F1D]/25" />
+                              <span className="text-sm font-extrabold tabular-nums text-[#B83B24] shrink-0">
+                                {totals.kcal} kcal
+                              </span>
                             </div>
-                            <div className="text-[11px] tabular-nums text-[#5D6660]">
+                            <div className="text-[11px] tabular-nums text-[#5D5752] mt-0.5">
                               P{totals.protein} · K{totals.carbs} · Y{totals.fat}
                             </div>
                           </div>

@@ -1,37 +1,45 @@
-/* SofraAI — Design System Tokens
- * Mode: Operate | Palette: 60-30-10 Stoneware Kitchen (#F7F5F0 / #1C231F / #C84B31)
- */
+/* SofraAI — Anatolian Culinary Notebook (#FBF7F0 / #231F1D / #B83B24) */
 @import "tailwindcss";
 
 :root {
-  --bg-stone: #f7f5f0;
-  --bg-card: #ffffff;
-  --border-clay: #e6e2d9;
-  --ink-olive: #1c231f;
-  --ink-muted: #5d6660;
-  --accent-pomegranate: #c84b31;
-  --macro-protein: #2563eb;
-  --macro-carb: #d97706;
-  --macro-fat: #7c3aed;
-  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --bg-linen: #fbf7f0;
+  --bg-card: #fffdf8;
+  --border-clay: #e4ddd0;
+  --ink-espresso: #231f1d;
+  --ink-muted: #5d5752;
+  --accent-sumac: #b83b24;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Work Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-stone);
-  color: var(--ink-olive);
+  background-color: var(--bg-linen);
+  color: var(--ink-espresso);
 }
 
 .font-display-sofra {
   font-family: var(--font-display);
+  text-wrap: balance;
 }
 
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
 
+::selection {
+  background: rgba(184, 59, 36, 0.2);
+  color: #231f1d;
+}
+
 :focus-visible {
-  outline: 2.5px solid var(--accent-pomegranate);
+  outline: 2.5px solid var(--accent-sumac);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
 }
