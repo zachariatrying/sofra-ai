@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ChangeEvent } from 'react';
+import { GuideWidget } from './components/GuideWidget';
 import { Settings, Trash2, Home, Store, X, Download, Upload, ShieldCheck, BarChart3, ImageDown } from 'lucide-react';
 import type { LoggedMeal, SofraState } from './types';
 import { TURKISH_DISHES } from './data/turkishCuisine';
@@ -526,6 +527,7 @@ export default function App() {
           </div>
         </div>
       )}
+      <GuideWidget />
     </div>
   );
 }
